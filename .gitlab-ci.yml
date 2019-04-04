@@ -3,6 +3,8 @@
 # https://hub.docker.com/r/library/node/tags/
 image: node:latest
 
+stages:
+  - deploy
 # Pick zero or more services to be used on all builds.
 # Only needed when using a docker container to run your tests in.
 # Check out: http://docs.gitlab.com/ce/ci/docker/using_docker_images.html#what-is-a-service
@@ -16,3 +18,12 @@ cache:
 test_async:
   script:
    - npm install
+
+  deploy-prod:
+    stage: deploy
+    only:
+      - master
+    script:
+      - npm run build
+      - firebase use first --token $FIREBASE_TOKEN
+      - firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token $FIREBASE_TOKEN
