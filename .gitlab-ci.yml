@@ -15,5 +15,5 @@ deploy-prod:
     - npm install
     - npm run build
     - cd ./build
-    - firebase use first --token $FIREBASE_TOKEN
+    - firebase use first-35825 --token $FIREBASE_TOKEN
     - firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token $FIREBASE_TOKEN
