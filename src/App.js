@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learn React APP ....<b>github</b> -> gitlab  ci cd -> deployed to firebase 
           </a>
         </header>
       </div>
