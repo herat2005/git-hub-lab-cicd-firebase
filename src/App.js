@@ -17,8 +17,10 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React APP ....<b>github</b> -> gitlab  ci cd -> deployed to firebase 
+            Learn React APP ....
           </a>
+          <b>github</b> -> gitlab  ci cd -> deployed to firebase
+          <h1>{process.env.NODE_ENV} </h1>
         </header>
       </div>
     );
