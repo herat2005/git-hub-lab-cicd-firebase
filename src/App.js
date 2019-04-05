@@ -21,6 +21,9 @@ class App extends Component {
           </a>
           <b>github</b> -> gitlab  ci cd -> deployed to firebase
           <h1>{process.env.NODE_ENV} </h1>
+          <br/>
+          
+          <h2>{process.env.REACT_APP_SECRET_KEY}</h2>
         </header>
       </div>
     );
